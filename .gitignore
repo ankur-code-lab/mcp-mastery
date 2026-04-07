@@ -1,0 +1,122 @@
+# ============================================================
+# SECRETS & ENVIRONMENT VARIABLES
+# ============================================================
+.env
+.env.*
+!.env.example          # Allow a sanitized example to be committed
+
+# ============================================================
+# PYTHON - Byte-compiled / Cache
+# ============================================================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ============================================================
+# PYTHON - Distribution / Packaging
+# ============================================================
+build/
+dist/
+wheels/
+*.egg-info/
+*.egg
+MANIFEST
+.eggs/
+
+# ============================================================
+# PYTHON - Virtual Environments
+# ============================================================
+.venv/
+venv/
+env/
+ENV/
+.python-version        # pyenv version pin — safe to commit, but optional
+
+# ============================================================
+# PYTHON - Testing & Coverage
+# ============================================================
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.tox/
+.nox/
+
+# ============================================================
+# PYTHON - Type Checking & Linting
+# ============================================================
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.ruff_cache/
+.pytype/
+
+# ============================================================
+# UV Package Manager
+# ============================================================
+# uv.lock is intentionally NOT ignored — commit it for reproducible installs
+.uv/
+
+# ============================================================
+# JUPYTER NOTEBOOKS
+# ============================================================
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ============================================================
+# PLAYWRIGHT / MCP BROWSER AUTOMATION
+# ============================================================
+.playwright-mcp/
+playwright-report/
+test-results/
+
+# ============================================================
+# DATA & LARGE FILES (common in GenAI/ML projects)
+# ============================================================
+*.csv
+*.tsv
+*.parquet
+*.pkl
+*.pickle
+*.h5
+*.hdf5
+*.json.gz
+*.npy
+*.npz
+# Uncomment below if you have model weight files
+# *.bin
+# *.pt
+# *.pth
+# *.safetensors
+# *.gguf
+
+# ============================================================
+# PROJECT-SPECIFIC
+# ============================================================
+# Local resources folder (ignored entirely)
+Resources/
+
+# Job search — runtime-generated data (temp fetched jobs & saved candidate jobs)
+3_Tools_Resources_Prompts/job_search/jobs/temp/
+3_Tools_Resources_Prompts/job_search/jobs/saved_by_candidate/general/
+
+# ============================================================
+# EDITORS & IDEs
+# ============================================================
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ============================================================
+# LOGS & TEMP FILES
+# ============================================================
+*.log
+*.tmp
+*.temp
+logs/
+tmp/

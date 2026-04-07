@@ -1,0 +1,16 @@
+{
+    "mcpServers": {
+        "weather": {
+            "command": "python3",
+            "args": [
+                "/home/ankur-saxena/Documents/GenAI/MCP_/MCP-Mastery/1_Basic_MCP_Server/mcp_use_framework_config_file/servers/server_weather.py"
+            ]
+        },
+        "news": {
+            "command": "python3",
+            "args": [
+                "/home/ankur-saxena/Documents/GenAI/MCP_/MCP-Mastery/1_Basic_MCP_Server/mcp_use_framework_config_file/servers/server_news.py"
+            ]
+        }
+    }
+}

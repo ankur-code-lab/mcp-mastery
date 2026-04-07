@@ -1,0 +1,16 @@
+{
+    "mcpServers": {
+        "weather": {
+            "command": "/home/ankur-saxena/Documents/GenAI/MCP_/MCP-Mastery/.venv/bin/python3",
+            "args": [
+                "/home/ankur-saxena/Documents/GenAI/MCP_/MCP-Mastery/1_Basic_MCP_Server/Integrating_with_Antigravity/servers/server_weather.py"
+            ]
+        },
+        "news": {
+            "command": "/home/ankur-saxena/Documents/GenAI/MCP_/MCP-Mastery/.venv/bin/python3",
+            "args": [
+                "/home/ankur-saxena/Documents/GenAI/MCP_/MCP-Mastery/1_Basic_MCP_Server/Integrating_with_Antigravity/servers/server_news.py"
+            ]
+        }
+    }
+}

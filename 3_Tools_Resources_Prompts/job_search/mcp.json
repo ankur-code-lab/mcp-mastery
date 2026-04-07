@@ -1,0 +1,10 @@
+{
+    "mcpServers": {
+        "job_search": {
+            "command": "/home/ankur-saxena/Documents/GenAI/MCP_/MCP-Mastery/.venv/bin/python3",
+            "args": [
+                "/home/ankur-saxena/Documents/GenAI/MCP_/MCP-Mastery/3_Tools_Resources_Prompts/job_search/server.py"
+            ]
+        }
+    }
+}
