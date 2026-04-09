@@ -3,7 +3,8 @@
 # ============================================================
 .env
 .env.*
-!.env.example          # Allow a sanitized example to be committed
+# Allow a sanitized example to be committed
+!.env.example
 
 # ============================================================
 # PYTHON - Byte-compiled / Cache
