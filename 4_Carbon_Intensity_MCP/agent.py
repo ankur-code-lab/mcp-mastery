@@ -1,26 +1,29 @@
+## https://pydantic.dev/docs/ai/mcp/client/
+
+
 # agent_with_mcp.py
 import asyncio
 
 from pydantic_ai import Agent
-from pydantic_ai.mcp import MCPServerStreamableHTTP
+from pydantic_ai.mcp import MCPServerStreamableHTTP, MCPServerStdio
 from dotenv import load_dotenv
 load_dotenv()
-# from pydantic_ai.models.openai import OpenAIChatModel
+from pathlib import Path
 
-# Model: Groq's OpenAI-compatible GPT-OSS 120B
-# Assumes:
-#   OPENAI_API_KEY   = your Groq API key
-#   OPENAI_BASE_URL  = "https://api.groq.com/openai/v1"
-# model = OpenAIChatModel("openai/gpt-oss-120b")
 model = "groq:openai/gpt-oss-120b"
 
+try:
+    CURRENT_DIR = Path(__file__).resolve().parent
+except:
+    CURRENT_DIR = Path.cwd()
 
-'''
-Connect to whatever MCP server is running at http://localhost:8000/mcp and load all the tools that server exposes
-'''
+server_path = CURRENT_DIR / 'carbon_mcp_server.py'
 
-# MCP server (the one we defined in carbon_mcp_server.py)
-server = MCPServerStreamableHTTP("http://localhost:8000/mcp")
+## Connect to MCP server carbon_mcp_server.py running at http://localhost:8001/mcp and load all the tools that server exposes
+server = MCPServerStreamableHTTP("http://localhost:8001/mcp")
+
+## Connect to MCP Server carbon_mcp_server.py running in stdio mode
+# server = MCPServerStdio('uv', args=['run', str(server_path)], timeout=10)
 
 agent = Agent(
     model,

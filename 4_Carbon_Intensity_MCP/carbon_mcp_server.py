@@ -3,13 +3,14 @@ from datetime import datetime, timezone, date
 from typing import Dict, Any
 
 import requests
-from mcp.server.fastmcp import FastMCP
+# from mcp.server.fastmcp import FastMCP
+from fastmcp import FastMCP
 
 BASE_URL = "https://api.carbonintensity.org.uk"
 HEADERS = {"Accept": "application/json"}
 
 # Create an MCP server
-mcp = FastMCP("CarbonIntensityServer", json_response=True)
+mcp = FastMCP("CarbonIntensityServer")
 
 
 def _get_json(path: str) -> Dict[str, Any]:
@@ -101,6 +102,5 @@ Now this web endpoint contains:
 
 
 if __name__ == "__main__":
-    # Expose the MCP server over HTTP (default: http://localhost:8000/mcp)
-    mcp.run(transport="streamable-http")
+    mcp.run(transport="streamable-http", port=8001)
     # mcp.run(transport="stdio")
