@@ -85,6 +85,8 @@ test-results/
 *.json.gz
 *.npy
 *.npz
+chroma_db/
+downloads/
 # Uncomment below if you have model weight files
 # *.bin
 # *.pt
